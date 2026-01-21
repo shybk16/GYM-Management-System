@@ -1,0 +1,335 @@
+:root {
+    --sidebar-width: 280px;
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+    background: var(--bg-color);
+}
+
+/* Sidebar */
+.sidebar {
+    width: var(--sidebar-width);
+    background: var(--second-bg-color);
+    padding: 2rem;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    border-right: 2px solid var(--main-color);
+    z-index: 100;
+}
+
+.sidebar-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(69, 255, 202, 0.2);
+}
+
+.sidebar-header h2 {
+    color: var(--main-color);
+    font-size: 2rem;
+}
+
+.sidebar-header p {
+    color: #ccc;
+    font-size: 1.2rem;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+.user-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #000;
+    font-weight: bold;
+}
+
+.user-info h3 {
+    color: #fff;
+    font-size: 1.6rem;
+    margin-bottom: 0.2rem;
+}
+
+.user-info p {
+    color: var(--main-color);
+    font-size: 1.2rem;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-menu li {
+    margin-bottom: 0.5rem;
+}
+
+.sidebar-menu a {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    color: #ccc;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 1.4rem;
+}
+
+.sidebar-menu a:hover,
+.sidebar-menu a.active {
+    background: var(--main-color);
+    color: #000;
+}
+
+.sidebar-menu i {
+    font-size: 1.6rem;
+}
+
+.logout-btn {
+    margin-top: 3rem;
+    padding: 1rem;
+    background: transparent;
+    border: 2px solid #ff4444;
+    color: #ff4444;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+    background: #ff4444;
+    color: #fff;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    margin-left: var(--sidebar-width);
+    padding: 2rem;
+}
+
+.dashboard-header {
+    background: var(--second-bg-color);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(69, 255, 202, 0.2);
+}
+
+.dashboard-header h1 {
+    color: var(--main-color);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.dashboard-header p {
+    color: #ccc;
+    font-size: 1.4rem;
+}
+
+.section {
+    background: var(--second-bg-color);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 3rem;
+    border: 1px solid rgba(69, 255, 202, 0.2);
+}
+
+.section-title {
+    color: var(--main-color);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(69, 255, 202, 0.2);
+}
+
+.action-btn {
+    padding: 0.8rem 1.5rem;
+    background: var(--main-color);
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.3rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.action-btn:hover {
+    background: #3ae8b8;
+    transform: translateY(-2px);
+}
+
+/* Table Styles */
+.table-container {
+    background: rgba(0,0,0,0.3);
+    border-radius: 15px;
+    border: 1px solid rgba(69, 255, 202, 0.2);
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table thead {
+    background: var(--main-color);
+}
+
+.data-table th {
+    padding: 1.5rem 1rem;
+    text-align: left;
+    color: #000;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.data-table td {
+    padding: 1.5rem 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    color: #ccc;
+    font-size: 1.3rem;
+}
+
+.data-table tbody tr:hover {
+    background: rgba(255,255,255,0.05);
+}
+
+.action-cell {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-sm {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-delete {
+    background: rgba(255, 0, 0, 0.2);
+    color: #f00;
+}
+
+.btn-delete:hover {
+    background: #f00;
+    color: #fff;
+}
+
+.btn-assign {
+    background: rgba(69, 255, 202, 0.2);
+    color: var(--main-color);
+}
+
+.btn-assign:hover {
+    background: var(--main-color);
+    color: #000;
+}
+
+.search-input {
+    padding: 0.8rem 1.2rem;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1.3rem;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 1rem;
+}
+
+.search-input:focus {
+    border-color: var(--main-color);
+    outline: none;
+}
+
+.trainer-card {
+    background: rgba(0,0,0,0.3);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(69, 255, 202, 0.2);
+    margin-bottom: 1.5rem;
+}
+
+.trainer-card h4 {
+    color: var(--main-color);
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+.trainer-info {
+    color: #ccc;
+    margin-bottom: 0.7rem;
+    font-size: 1.3rem;
+}
+
+.trainer-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .sidebar {
+        width: 250px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+    
+    .sidebar.active {
+        transform: translateX(0);
+    }
+    
+    .main-content {
+        margin-left: 0;
+        padding: 1rem;
+    }
+    
+    .menu-toggle {
+        display: block;
+        position: fixed;
+        top: 2rem;
+        left: 2rem;
+        z-index: 101;
+        background: var(--main-color);
+        color: #000;
+        border: none;
+        padding: 0.8rem 1.2rem;
+        border-radius: 8px;
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+}
