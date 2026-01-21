@@ -55,6 +55,8 @@ header {
     height: 40px;
     margin-right: 10px; /* Image aur text ke beech spacing */
     vertical-align: middle; /* Text ke saath vertical alignment */
+    border-radius: 50%; /* Make logo circular */
+    border: 2px solid var(--main-color); /* Add border around logo */
 }
 
 .brand-text {
