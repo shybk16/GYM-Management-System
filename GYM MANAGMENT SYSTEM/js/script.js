@@ -1,11 +1,4 @@
-// Typing Effect for Home Section
-const typed = new Typed('.multiple-text', {
-  strings: ['Bodybuilding', 'Fitness', 'Crossfit', 'Cardio'],
-  typeSpeed: 100,
-  backSpeed: 100,
-  backDelay: 1000,
-  loop: true
-});
+
 
 // Active Navigation Link on Scroll
 const sections = document.querySelectorAll('section');
@@ -260,26 +253,8 @@ function startMemberSession(userData) {
     localStorage.setItem('memberStats', JSON.stringify(stats));
 }
 
-// Check for existing session
-function checkExistingSession() {
-    const user = localStorage.getItem('fitflexUser');
-    const lastLogin = localStorage.getItem('lastLogin');
-    
-    if (user && lastLogin) {
-        const hoursSinceLastLogin = (new Date() - new Date(lastLogin)) / (1000 * 60 * 60);
-        
-        // Auto-logout after 24 hours
-        if (hoursSinceLastLogin > 24) {
-            localStorage.removeItem('fitflexUser');
-            localStorage.removeItem('lastLogin');
-            return false;
-        }
-        return true;
-    }
-    return false;
-}
 
-// Enhanced workout tracking
+
 class WorkoutTracker {
     constructor() {
         this.workouts = JSON.parse(localStorage.getItem('workoutHistory')) || [];
